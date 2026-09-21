@@ -1,0 +1,8 @@
+{
+  "reference_splits": ["train"],
+  "match_cell": true,
+  "dose_tolerance_um": 0.0,
+  "time_tolerance_h": 0.0,
+  "aggregation": "max",
+  "chunk_profiles": 1024
+}

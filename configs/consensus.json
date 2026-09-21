@@ -1,0 +1,8 @@
+{
+  "mode": "consensus",
+  "compatibility_weight": 1.0,
+  "consensus_weight": 0.25,
+  "disagreement_weight": 0.1,
+  "stress_weight": null,
+  "novelty_weight": null
+}

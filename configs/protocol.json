@@ -1,0 +1,9 @@
+{
+  "mode": "repeated_holdout",
+  "strategy": "scaffold",
+  "seed": 17,
+  "repetitions": 3,
+  "folds": 1,
+  "fractions": [0.7, 0.15, 0.15],
+  "acyclic_policy": "group"
+}

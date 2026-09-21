@@ -1,0 +1,16 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "RIGID",
+  "version": "0.3.0",
+  "description": "Research software for signature-conditioned molecular ranking, graph generation, reference-catalog retrieval and stress-aware evaluation with configurable experimental protocols.",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": ["Python", "C++"],
+  "runtimePlatform": "Python 3.11 or newer",
+  "operatingSystem": ["Windows", "Linux", "macOS"],
+  "developmentStatus": "concept",
+  "author": [{"@type": "Organization", "name": "RIGID contributors"}],
+  "keywords": ["transcriptomics", "molecular design", "graph neural networks", "FAIR4RS"],
+  "softwareRequirements": ["NumPy >=1.26,<3", "RDKit >=2024.3", "PyTorch >=2.6,<3 (ML extra)"],
+  "applicationCategory": "Computational biology research"
+}

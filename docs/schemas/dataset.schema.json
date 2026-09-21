@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RIGID dataset metadata",
+  "type": "object",
+  "required": ["schema_version", "gene_manifest_sha256", "provenance", "files_sha256", "n_profiles", "n_compounds"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "gene_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "n_profiles": {"type": "integer", "minimum": 0},
+    "n_compounds": {"type": "integer", "minimum": 0},
+    "files_sha256": {
+      "type": "object",
+      "required": ["genes.json", "compounds.csv", "profiles.csv"],
+      "additionalProperties": false,
+      "properties": {
+        "genes.json": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "compounds.csv": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "profiles.csv": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["kind", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {"enum": ["synthetic", "experimental", "unknown"]},
+        "description": {"type": "string"},
+        "source_urls": {"type": "array", "items": {"type": "string", "format": "uri"}},
+        "input_sha256": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+        "transformations": {"type": "array", "items": {"type": "string"}},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
