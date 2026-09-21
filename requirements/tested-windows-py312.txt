@@ -17,7 +17,7 @@ filelock==3.32.6
 fonttools==4.65.0
 fsspec==2026.7.0
 h5py==3.16.0
-idna==3.19
+idna==3.20
 iniconfig==2.3.0
 Jinja2==3.1.6
 kiwisolver==1.5.1
