@@ -33,7 +33,7 @@ jobs:
       - run: python -m mypy --follow-imports=skip src/rigid/config.py src/rigid/provenance.py src/rigid/checkpoint.py src/rigid/storage.py src/rigid/serialization.py src/rigid/runs.py
       - run: python -m build
       - run: python tools/check_distribution.py --wheel-dir dist --output verification/installed-wheel --demo
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: checks-${{ matrix.os }}-${{ matrix.python }}
